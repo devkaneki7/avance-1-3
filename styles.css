@@ -77,6 +77,14 @@ nav ul li a:hover {
     color: var(--secondary-color);
 }
 
+/* Menu Toggle para Mobile */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
 /* Seções */
 .section {
     padding: 6rem 1rem 1rem 1rem;
@@ -212,14 +220,22 @@ footer {
     padding: 1rem;
 }
 
-/* Media Queries */
-@media (min-width: 768px) {
+/* gambiarra feito pelo kaneki S2 */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Esconde o menu padrão em dispositivos móveis */
+    }
+    .menu-toggle {
+        display: block; /* Mostra o ícone do menu hambúrguer em dispositivos móveis */
+    }
     .about .content {
-        flex-direction: row;
-        align-items: flex-start;
+        flex-direction: column; /* Muda a direção do flex para coluna em telas menores */
     }
     .about .text {
-        max-width: 600px;
-        margin-left: 2rem;
+        max-width: 100%; /* Ajusta a largura máxima do texto para 100% em dispositivos móveis */
+        margin-left: 0; /* Remove a margem esquerda para centralizar o texto */
+    }
+    .services-grid {
+        flex-direction: column; /* Muda a direção do flex para coluna em telas menores */
     }
 }
