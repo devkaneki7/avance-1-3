@@ -1,8 +1,8 @@
 /* Reset CSS */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui a borda e o preenchimento no tamanho total dos elementos */
 }
 
 /* Variáveis CSS */
@@ -11,231 +11,228 @@
     --secondary-color: #87CEFA; /* Azul Claro */
     --dark-blue: #4682B4; /* Azul Escuro */
     --light-purple: #663399; /* Roxo Claro */
-    --white: #fff;
-    --text-color: #333;
-    --overlay-color: rgba(0, 0, 0, 0.5);
+    --white: #fff; /* Branco */
+    --text-color: #333; /* Cor do texto padrão */
+    --overlay-color: rgba(0, 0, 0, 0.5); /* Cor do overlay com opacidade */
 }
 
 /* Estilos Globais */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
+    font-family: 'Arial', sans-serif; /* Define a fonte global */
+    line-height: 1.6; /* Define a altura da linha para facilitar a leitura */
+    color: var(--text-color); /* Define a cor do texto global */
 }
 
+/* Header */
 header {
-    background: var(--primary-color);
-    color: var(--white);
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    transition: background 0.5s;
+    background: var(--primary-color); /* Define a cor de fundo do cabeçalho */
+    color: var(--white); /* Define a cor do texto no cabeçalho */
+    padding: 1rem; /* Adiciona preenchimento ao cabeçalho */
+    position: fixed; /* Define o cabeçalho como fixo no topo */
+    width: 100%; /* Faz o cabeçalho ocupar toda a largura da página */
+    top: 0; /* Posiciona o cabeçalho no topo da página */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+    transition: background 0.5s; /* Adiciona uma transição suave para mudanças no fundo */
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 90px;
+    display: flex; /* Usa flexbox para organizar os itens */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    height: 90px; /* Define a altura do nav */
 }
 
 nav .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    display: flex; /* Container flexbox */
-    align-items: center; /* Alinhar verticalmente no centro */
+    font-size: 1.5rem; /* Tamanho da fonte da logo */
+    font-weight: bold; /* Deixa a logo em negrito */
+    display: flex; /* Usa flexbox na logo */
+    align-items: center; /* Alinha verticalmente ao centro */
 }
 
 .logo img {
-    width: 16%; /* Largura da imagem em porcentagem */
-    margin-top: 10px;
-    border-radius: 50%;
+    width: 16%; /* Define a largura da imagem da logo */
+    margin-top: 10px; /* Adiciona margem superior à imagem */
+    border-radius: 50%; /* Deixa a imagem redonda */
 }
 
 .logo h1 {
-    font-size: 25px; /* Ajuste do tamanho da fonte */
-    align-items: stretch; /* Esticar verticalmente */
-    margin-left: 20px;
+    font-size: 25px; /* Define o tamanho da fonte do título */
+    margin-left: 20px; /* Adiciona margem à esquerda do título */
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    font-weight: bolder;
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Usa flexbox para organizar os itens */
+    gap: 1rem; /* Adiciona espaço entre os itens */
+    font-weight: bolder; /* Deixa os itens em negrito */
 }
 
 nav ul li a {
-    color: var(--white);
-    text-decoration: none;
-    transition: color 0.3s;
+    color: var(--white); /* Define a cor dos links */
+    text-decoration: none; /* Remove a decoração dos links */
+    transition: color 0.3s; /* Adiciona transição suave para a cor */
 }
 
 nav ul li a:hover {
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* Muda a cor dos links ao passar o mouse */
 }
 
 /* Menu Toggle para Mobile */
 .menu-toggle {
-    display: none;
-    font-size: 1.5rem;
-    color: var(--white);
-    cursor: pointer;
+    display: none; /* Esconde o ícone de menu por padrão */
+    font-size: 1.5rem; /* Define o tamanho da fonte do ícone de menu */
+    color: var(--white); /* Define a cor do ícone de menu */
+    cursor: pointer; /* Muda o cursor para pointer ao passar o mouse */
 }
 
 /* Seções */
 .section {
-    padding: 6rem 1rem 1rem 1rem;
-    text-align: center;
-    position: relative;
+    padding: 6rem 1rem 1rem; /* Adiciona preenchimento ao redor das seções */
+    text-align: center; /* Centraliza o texto */
+    position: relative; /* Define a posição relativa */
 }
 
 .home {
-    background: url('background.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    text-align: center;
-    position: relative;
+    background: url('background.jpg') no-repeat center center/cover; /* Define o fundo com uma imagem */
+    height: 100vh; /* Faz a seção ocupar toda a altura da janela */
+    display: flex; /* Usa flexbox para organizar os itens */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    color: var(--white); /* Define a cor do texto */
+    position: relative; /* Define a posição relativa */
 }
 
 .home .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: var(--overlay-color);
-    backdrop-filter: blur(10px);
+    position: absolute; /* Define a posição absoluta */
+    top: 0; /* Posiciona no topo */
+    bottom: 0; /* Posiciona na parte inferior */
+    left: 0; /* Posiciona na esquerda */
+    right: 0; /* Posiciona na direita */
+    background: var(--overlay-color); /* Define a cor de fundo com opacidade */
+    backdrop-filter: blur(10px); /* Adiciona um filtro de desfoque */
 }
 
 .home .container {
-    position: relative;
-    z-index: 2;
+    position: relative; /* Define a posição relativa */
+    z-index: 2; /* Garante que o conteúdo fique acima do overlay */
 }
 
 #learnMoreBtn {
-    padding: 0.7rem 1.5rem;
-    font-size: 1.2rem;
-    background: var(--secondary-color);
-    color: var(--white);
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-top: 1rem;
+    padding: 0.7rem 1.5rem; /* Adiciona preenchimento ao botão */
+    font-size: 1.2rem; /* Define o tamanho da fonte do botão */
+    background: var(--secondary-color); /* Define a cor de fundo do botão */
+    color: var(--white); /* Define a cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    cursor: pointer; /* Muda o cursor para pointer ao passar o mouse */
+    transition: background 0.3s; /* Adiciona transição suave para a cor de fundo */
+    margin-top: 1rem; /* Adiciona margem superior ao botão */
 }
 
 #learnMoreBtn:hover {
-    background: var(--dark-blue);
+    background: var(--dark-blue); /* Muda a cor de fundo ao passar o mouse */
 }
 
 /* Sobre */
 .about .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
+    display: flex; /* Usa flexbox para organizar os itens */
+    flex-direction: column; /* Muda a direção do flex para coluna */
+    align-items: center; /* Alinha os itens ao centro */
+    text-align: left; /* Alinha o texto à esquerda */
 }
 
 .about .about-image {
-    max-width: 100%; /* Alterado de 30% para 100% para melhorar a visualização em telas menores */
-    margin-bottom: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-left: 0; /* Removido margin-left para centralizar a imagem em telas menores */
+    max-width: 100%; /* Define a largura máxima da imagem */
+    margin-bottom: 2rem; /* Adiciona margem inferior à imagem */
+    border-radius: 10px; /* Define bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra à imagem */
 }
 
 /* Serviços */
 .services-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
+    display: flex; /* Usa flexbox para organizar os itens */
+    flex-wrap: wrap; /* Permite que os itens sejam distribuídos em várias linhas */
+    gap: 1.5rem; /* Adiciona espaço entre os itens */
+    justify-content: center; /* Centraliza os itens */
 }
 
 .service-item {
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 100%; /* Ajustado para 100% em vez de tamanho fixo para responsividade */
-    max-width: 300px;
-    text-align: center;
+    background: var(--white); /* Define a cor de fundo do item de serviço */
+    padding: 2rem; /* Adiciona preenchimento ao redor do item */
+    border-radius: 10px; /* Define bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao item */
+    transition: transform 0.3s, box-shadow 0.3s; /* Adiciona transições suaves */
+    width: 100%; /* Define a largura como 100% */
+    max-width: 300px; /* Define a largura máxima */
+    text-align: center; /* Centraliza o texto */
 }
 
 .service-item i {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+    font-size: 3rem; /* Define o tamanho da fonte dos ícones */
+    color: var(--primary-color); /* Define a cor dos ícones */
+    margin-bottom: 1rem; /* Adiciona margem inferior aos ícones */
 }
 
 .service-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px); /* Move o item para cima ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adiciona sombra mais intensa ao passar o mouse */
 }
 
 /* Contato */
 .contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 100%; /* Alterado de 500px para 100% para responsividade */
-    margin: 0 auto;
-    padding: 1rem; /* Adicionado padding para melhorar o espaçamento em telas menores */
+    display: flex; /* Usa flexbox para organizar os itens */
+    flex-direction: column; /* Muda a direção do flex para coluna */
+    gap: 1rem; /* Adiciona espaço entre os itens */
+    max-width: 100%; /* Define a largura máxima */
+    margin: 0 auto; /* Centraliza o formulário */
+    padding: 1rem; /* Adiciona preenchimento ao redor do formulário */
 }
 
 .contact form input,
 .contact form textarea {
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 100%;
-    font-size: 1rem;
+    padding: 1rem; /* Adiciona preenchimento aos campos */
+    border: 1px solid #ddd; /* Define a borda dos campos */
+    border-radius: 5px; /* Define bordas arredondadas */
+    width: 100%; /* Define a largura como 100% */
+    font-size: 1rem; /* Define o tamanho da fonte */
 }
 
 .contact form button {
-    padding: 1rem;
-    border: none;
-    background: var(--primary-color);
-    color: var(--white);
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: background 0.3s;
+    padding: 1rem; /* Adiciona preenchimento ao botão */
+    border: none; /* Remove a borda do botão */
+    background: var(--primary-color); /* Define a cor de fundo do botão */
+    color: var(--white); /* Define a cor do texto do botão */
+    cursor: pointer; /* Muda o cursor para pointer ao passar o mouse */
+    font-size: 1.2rem; /* Define o tamanho da fonte do botão */
+    transition: background 0.3s; /* Adiciona transição suave para a cor de fundo */
 }
 
 .contact form button:hover {
-    background: var(--light-purple);
+    background: var(--light-purple); /* Muda a cor de fundo ao passar o mouse */
 }
 
 /* Rodapé */
 footer {
-    background: var(--primary-color);
-    color: var(--white);
-    text-align: center;
-    padding: 1rem;
+    background: var(--primary-color); /* Define a cor de fundo do rodapé */
+    color: var(--white); /* Define a cor do texto do rodapé */
+    text-align: center; /* Centraliza o texto */
+    padding: 1rem; /* Adiciona preenchimento ao rodapé */
 }
 
-/* gambiarra feito pelo kaneki S2 */
+/* Responsividade */
 @media (max-width: 768px) {
     nav ul {
-        display: none; /* Esconde o menu padrão em dispositivos móveis */
+        display: none; /* Esconde os itens do nav em telas pequenas */
     }
     .menu-toggle {
-        display: block; /* Mostra o ícone do menu hambúrguer em dispositivos móveis */
+        display: block; /* Mostra o ícone de menu em telas pequenas */
     }
     .about .content {
-        flex-direction: column; /* Muda a direção do flex para coluna em telas menores */
+        flex-direction: column; /* Muda a direção do flex para coluna */
     }
     .about .text {
-        max-width: 100%; /* Ajusta a largura máxima do texto para 100% em dispositivos móveis */
-        margin-left: 0; /* Remove a margem esquerda para centralizar o texto */
+        max-width: 100%; /* Define a largura máxima como 100% */
     }
     .services-grid {
-        flex-direction: column; /* Muda a direção do flex para coluna em telas menores */
+        flex-direction: column; /* Muda a direção do flex para coluna */
     }
 }
