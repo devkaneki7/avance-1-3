@@ -1,0 +1,225 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis CSS */
+:root {
+    --primary-color: #7824b4; /* Roxo */
+    --secondary-color: #87CEFA; /* Azul Claro */
+    --dark-blue: #4682B4; /* Azul Escuro */
+    --light-purple: #663399; /* Roxo Claro */
+    --white: #fff;
+    --text-color: #333;
+    --overlay-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos Globais */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+header {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.5s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex; /* Container flexbox */
+    align-items: center; /* Alinhar verticalmente no centro */
+}
+
+.logo img {
+    width: 16%; /* Largura da imagem em porcentagem */
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+.logo h1 {
+    font-size: 25px; /* Ajuste do tamanho da fonte */
+    align-items: stretch; /* Esticar verticalmente */
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    font-weight: bolder;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Seções */
+.section {
+    padding: 6rem 1rem 1rem 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.home {
+    background: url('background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-align: center;
+    position: relative;
+}
+
+.home .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--overlay-color);
+    backdrop-filter: blur(10px);
+}
+
+.home .container {
+    position: relative;
+    z-index: 2;
+}
+
+#learnMoreBtn {
+    padding: 0.7rem 1.5rem;
+    font-size: 1.2rem;
+    background: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 1rem;
+}
+
+#learnMoreBtn:hover {
+    background: var(--dark-blue);
+}
+
+/* Sobre */
+.about .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.about .about-image {
+    max-width: 100%; /* Alterado de 30% para 100% para melhorar a visualização em telas menores */
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 0; /* Removido margin-left para centralizar a imagem em telas menores */
+}
+
+/* Serviços */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.service-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%; /* Ajustado para 100% em vez de tamanho fixo para responsividade */
+    max-width: 300px;
+    text-align: center;
+}
+
+.service-item i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Contato */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 100%; /* Alterado de 500px para 100% para responsividade */
+    margin: 0 auto;
+    padding: 1rem; /* Adicionado padding para melhorar o espaçamento em telas menores */
+}
+
+.contact form input,
+.contact form textarea {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.contact form button {
+    padding: 1rem;
+    border: none;
+    background: var(--primary-color);
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+}
+
+.contact form button:hover {
+    background: var(--light-purple);
+}
+
+/* Rodapé */
+footer {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .about .content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .about .text {
+        max-width: 600px;
+        margin-left: 2rem;
+    }
+}

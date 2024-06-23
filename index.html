@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta tag para garantir que a página seja exibida corretamente em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avance - Consultoria Júnior</title>
+    <!-- Meta tag para descrição do site, importante para SEO -->
+    <meta name="description" content="Consultoria Júnior oferecendo soluções inovadoras em TI, Marketing, Jurídico e Financeiro.">
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Script para adicionar ícones da Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" async></script>
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+        <nav>
+            <!-- Logotipo da empresa -->
+            <div class="logo" aria-label="Avance Consultoria Júnior">
+                <img src="logo_avance.jpeg" alt="Logo Avance Consultoria Júnior">
+                <h1>Avance - Consultoria Júnior</h1>
+            </div>
+            <!-- Menu de navegação -->
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Sobre Nós</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <!-- Ícone de menu hamburguer para mobile -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção inicial com uma imagem de fundo e uma sobreposição -->
+        <section id="home" class="section home">
+            <div class="overlay"></div>
+            <div class="container">
+                <h1>Bem-vindo à Avance - Consultoria Júnior</h1>
+                <p>Seu parceiro para soluções inovadoras.</p>
+                <button id="learnMoreBtn">Saiba Mais</button>
+            </div>
+        </section>
+     
+        <!-- Seção "Quem Somos" -->
+        <section id="quemsomos" class="section quemsomos">
+            <div class="container">
+                <h2>Quem somos?</h2>
+                <p>Fundada em 2017 e federada em 2019 é constituída e gerida atualmente por discentes do curso de Administração, Direito, Sistema de Informação e Comunicação (Jornalismo e Publicidade e Propaganda) da Universidade do Estado de Minas Gerais - Unidade Frutal.</p>
+                <p>Prestamos serviços e desenvolvemos projetos para empresas, entidades e sociedade em geral, sob a orientação de professores e profissionais especializados.</p>
+            </div>
+        </section>
+
+        <!-- Seção "Sobre" com imagem e texto -->
+        <section id="about" class="section about">
+            <div class="container">
+                <h2>Nossa missão e valores:</h2>
+                <div class="content">
+                    <!-- Imagem da equipe -->
+                    <img src="logo_avance_3_cores_page-0001-removebg-preview.png" alt="Equipe Avance Consultoria Júnior" class="about-image">
+                    <div class="text">
+                        <div class="mission">
+                            <h3>Missão</h3>
+                            <p>Auxiliar empresas por meio de soluções inovadoras, otimizando seu tempo e atendendo suas necessidades.</p>
+                        </div>
+                        <div class="values">
+                            <h3>Valores</h3>
+                            <p>Comprometimento, valorização das pessoas, respeito, ética, inovação e atualização constante.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção "Serviços" com ícones e descrições -->
+        <section id="services" class="section services">
+            <div class="container">
+                <h2>Serviços</h2>
+                <div class="services-grid">
+                    <!-- Serviço de TI -->
+                    <div class="service-item">
+                        <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                        <h3>TI</h3>
+                        <p>- Dashboard em Power BI</p>
+                        <p>- Automação de planilhas</p>
+                        <p>- Criação de Sites para delivery</p>
+                    </div>
+                    <!-- Serviço de Marketing -->
+                    <div class="service-item">
+                        <i class="fas fa-bullhorn" aria-hidden="true"></i>
+                        <h3>MARKETING</h3>
+                        <p>- Criação de identidade visual</p>
+                        <p>- Gerenciamento de Redes Sociais</p>
+                        <p>- Criação de Logo</p>
+                    </div>  
+                    <!-- Serviço Jurídico -->
+                    <div class="service-item">
+                        <i class="fas fa-gavel" aria-hidden="true"></i>
+                        <h3>JURÍDICO</h3>
+                        <p>- Elaboração de Contrato</p>
+                        <p>- Abertura de Empresas e MEI</p>
+                        <p>- Registro de Marca/Patente</p>
+                    </div>
+                    <!-- Serviço Administrativo -->
+                    <div class="service-item">
+                        <i class="fas fa-chart-line" aria-hidden="true"></i>
+                        <h3>ADMINISTRATIVO</h3>
+                        <p>- Análise Financeira</p>
+                        <p>- Controle de custos</p>
+                        <p>- Planejamento Estratégico</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção "Contato" com formulário -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h4>Para saber mais sobre outros serviços da Avance - Consultoria Júnior, entre em contato conosco:</h4>
+                <h2>Contato</h2>
+                <p>Entre em contato conosco para mais informações</p>
+                <form>
+                    <input type="text" placeholder="Seu nome" required aria-label="Seu nome">
+                    <input type="email" placeholder="Seu email" required aria-label="Seu email">
+                    <textarea placeholder="Sua mensagem" required aria-label="Sua mensagem"></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <p>&copy; 2024 Avance Consultoria Júnior. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script para funcionalidades adicionais -->
+    <script src="scripts.js" async></script>
+</body>
+</html>
